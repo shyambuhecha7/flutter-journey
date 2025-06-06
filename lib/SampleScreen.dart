@@ -14,7 +14,7 @@ class _SampleScreenState extends State<SampleScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text("My First App"),
         backgroundColor: Colors.blue,
@@ -53,10 +53,7 @@ class _SampleScreenState extends State<SampleScreen> {
             OutlinedButton(onPressed: () {}, child: Text("Outlined Button")),
 
             Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16,
-                vertical: 8,
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: TextField(
                 controller: emailText,
                 keyboardType: TextInputType.emailAddress,
@@ -109,8 +106,9 @@ class _SampleScreenState extends State<SampleScreen> {
               ),
             ),
 
+
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               child: SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(

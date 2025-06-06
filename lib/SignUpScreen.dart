@@ -15,6 +15,9 @@ class _SignupScreenState extends State<SignupScreen> {
   bool isHideConfirmPassword = true;
   bool isChecked = false;
 
+  var date = "";
+  var time = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -208,6 +211,88 @@ class _SignupScreenState extends State<SignupScreen> {
 
             SizedBox(height: 12),
 
+            //date
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Text(
+                  "Select Appointment Date: ",
+                  style: TextStyle(fontSize: 18, color: Colors.black),
+                ),
+
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    elevation: 0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  onPressed: () async {
+                    DateTime? datePicker = await showDatePicker(
+                      context: context,
+                      firstDate: DateTime(1990),
+                      lastDate: DateTime(2100),
+                      initialDate: DateTime.now(),
+                    );
+                    setState(() {
+                      date =
+                          "${datePicker?.day}/${datePicker!.month}/${datePicker?.year}";
+                    });
+                  },
+
+                  child: Text(
+                    date == ""
+                        ? "${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}"
+                        : date,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 12),
+
+            //date
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Text(
+                  "Select Appointment Time : ",
+                  style: TextStyle(fontSize: 18, color: Colors.black),
+                ),
+
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    elevation: 0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  onPressed: () async {
+                    TimeOfDay? timePicker = await showTimePicker(
+                      context: context,
+                      initialTime: TimeOfDay.now(),
+                      initialEntryMode: TimePickerEntryMode.dial,
+                    );
+
+                    setState(() {
+                      time = "${timePicker?.hour} : ${timePicker!.minute} ";
+                    });
+                  },
+
+                  child: Text(
+                    time == ""
+                        ? "${TimeOfDay.now().hour}:${TimeOfDay.now().minute}"
+                        : time,
+                  ),
+                ),
+              ],
+            ),
+
+            SizedBox(height: 12),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -235,9 +320,15 @@ class _SignupScreenState extends State<SignupScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 12),
               child: SizedBox(
                 width: double.infinity,
-                child: ElevatedButton(onPressed: () {}, child: Text("Sign Up"),style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))
-                ),),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text("Sign Up"),
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                ),
               ),
             ),
           ],
