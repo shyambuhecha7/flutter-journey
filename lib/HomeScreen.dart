@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_first_project/GridScreen.dart';
+import 'package:my_first_project/components/custom_button.dart';
 
 import 'SignUpScreen.dart';
 
@@ -16,7 +16,7 @@ class _HomescreenState extends State<Homescreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Home Screen")),
-      body:  Container(
+      body: Container(
         color: Colors.white,
         width: double.infinity,
         padding: EdgeInsets.all(12),
@@ -47,7 +47,13 @@ class _HomescreenState extends State<Homescreen> {
               child: Text("Grid List"),
             ),
 
-            SizedBox(height: 12)
+            SizedBox(height: 12),
+
+            Custombutton(
+              text: "Custom Button",
+              onPress: () {},
+              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            ),
           ],
         ),
       ),
