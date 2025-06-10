@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_project/SampleScreen.dart';
+import 'package:my_first_project/HomeScreen.dart';
 import 'package:my_first_project/SignUpScreen.dart';
 
 void main() {
@@ -7,17 +7,15 @@ void main() {
 }
 
 class MainApp extends StatelessWidget {
-  // const MainApp({super.key});
-
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    const String appName = "My First App";
+    const String appName = "Flutter Journey";
     return MaterialApp(
       title: appName,
       debugShowCheckedModeBanner: false,
-      home: SignupScreen()
-
+      home: Homescreen()
     );
   }
 }

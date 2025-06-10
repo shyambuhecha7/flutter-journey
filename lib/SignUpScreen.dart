@@ -22,8 +22,17 @@ class _SignupScreenState extends State<SignupScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My First App"),
+        title: Text("Signup Screen"),
         backgroundColor: Colors.blue,
+        iconTheme: IconThemeData(color: Colors.white),
+        centerTitle: true,
+        leading: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: IconButton(
+                onPressed: () {Navigator.pop(context);},
+                icon: Icon(Icons.arrow_back_ios),
+          ),
+        ),
         titleTextStyle: TextStyle(color: Colors.white, fontSize: 24),
       ),
       body: Container(
