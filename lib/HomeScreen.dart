@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:my_first_project/GridScreen.dart';
 import 'package:my_first_project/components/custom_button.dart';
 import 'package:my_first_project/components/custom_text_field.dart';
+import 'package:my_first_project/screens/ListScreen.dart';
+import 'package:my_first_project/screens/ListTileScreen.dart';
 
 import 'SignUpScreen.dart';
 
@@ -54,8 +56,18 @@ class _HomescreenState extends State<Homescreen> {
             SizedBox(height: 12),
 
             Custombutton(
-              text: "Custom Button",
-              onPress: () {},
+              text: "List Screen",
+              onPress: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Listscreen()
+              ));},
+              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            ),
+
+            SizedBox(height: 12),
+
+            Custombutton(
+              text: "ListTile Screen",
+              onPress: () {Navigator.push(context, MaterialPageRoute(builder: (context) => ListTileScreen()
+              ));},
               padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             ),
 
