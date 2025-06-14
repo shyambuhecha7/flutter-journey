@@ -29,8 +29,10 @@ class _SignupScreenState extends State<SignupScreen> {
         leading: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12),
           child: IconButton(
-                onPressed: () {Navigator.pop(context);},
-                icon: Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back_ios),
           ),
         ),
         titleTextStyle: TextStyle(color: Colors.white, fontSize: 24),
@@ -43,13 +45,20 @@ class _SignupScreenState extends State<SignupScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+
+              CircleAvatar(
+                maxRadius: 80,
+                backgroundImage: AssetImage('assets/images/person.png'),
+              ),
+
             SizedBox(
               width: double.infinity,
               child: Text(
                 "Signup screen",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 24,
+                  fontFamily: 'FontMain',
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
