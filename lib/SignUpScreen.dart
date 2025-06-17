@@ -23,7 +23,6 @@ class _SignupScreenState extends State<SignupScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Signup Screen"),
-        backgroundColor: Colors.blue,
         iconTheme: IconThemeData(color: Colors.white),
         centerTitle: true,
         leading: Padding(
@@ -56,12 +55,7 @@ class _SignupScreenState extends State<SignupScreen> {
               child: Text(
                 "Signup screen",
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 24,
-                  fontFamily: 'FontMain',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
             ),
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_project/HomeScreen.dart';
-import 'package:my_first_project/SignUpScreen.dart';
+import 'package:my_first_project/screens/splash_screen.dart';
 
 void main() {
   runApp(MainApp());
@@ -13,9 +13,22 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     const String appName = "Flutter Journey";
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.yellow,
+        textTheme: TextTheme(
+          bodyLarge: TextStyle(fontSize: 18,fontWeight: FontWeight.w200),
+          headlineMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.w400)
+        ),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.blue,
+          iconTheme: IconThemeData(color: Colors.white),
+          titleTextStyle: TextStyle(color: Colors.white, fontSize: 24),
+          centerTitle: true,
+        ),
+      ),
       title: appName,
       debugShowCheckedModeBanner: false,
-      home: Homescreen()
+      home: const SplashScreen(),
     );
   }
 }

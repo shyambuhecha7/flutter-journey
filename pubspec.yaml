@@ -20,6 +20,7 @@ flutter:
 
   assets:
     - assets/images/person.png
+    - assets/images/app_logo.png
 
   fonts:
     - family: FontMain
