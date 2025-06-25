@@ -5,6 +5,7 @@ import 'package:my_first_project/components/custom_text_field.dart';
 import 'package:my_first_project/screens/ListScreen.dart';
 import 'package:my_first_project/screens/ListTileScreen.dart';
 import 'package:my_first_project/screens/common_screen.dart';
+import 'package:my_first_project/screens/dio/dio_network_screen.dart';
 import 'package:my_first_project/screens/network_screen.dart';
 
 import 'SignUpScreen.dart';
@@ -81,6 +82,17 @@ class _HomescreenState extends State<Homescreen> {
                   text: "Network Screen",
                   onPress: () {Navigator.push(context, MaterialPageRoute(builder: (context) => NetworkScreen()
                   ));},
+                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                ),
+                SizedBox(height: 12),
+
+                Custombutton(
+                  text: "Dio Network Screen",
+                  onPress: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => DioNetworkScreen()
+                        ));
+                  },
                   padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 ),
 
