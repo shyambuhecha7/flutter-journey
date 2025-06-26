@@ -4,6 +4,7 @@ import 'package:my_first_project/view/screens/ListScreen.dart';
 import 'package:my_first_project/view/screens/ListTileScreen.dart';
 import 'package:my_first_project/view/screens/common_screen.dart';
 import 'package:my_first_project/view/screens/dio/dio_network_screen.dart';
+import 'package:my_first_project/view/screens/getx/todo_list_screen.dart';
 import 'package:my_first_project/view/screens/network_screen.dart';
 
 
@@ -94,6 +95,15 @@ class _HomescreenState extends State<Homescreen> {
                         MaterialPageRoute(builder: (context) => DioNetworkScreen()
                         ));
                   },
+                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                ),
+
+                SizedBox(height: 12),
+
+                Custombutton(
+                  text: "ToDo List (GetX) Screen",
+                  onPress: () {Navigator.push(context, MaterialPageRoute(builder: (context) => TodoListScreen()
+                  ));},
                   padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 ),
 

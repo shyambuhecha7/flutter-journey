@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:my_first_project/view/controllers/todo_controller.dart';
 import 'package:my_first_project/view/screens/HomeScreen.dart';
 import 'package:my_first_project/view/screens/splash_screen.dart';
-
+import 'package:get/get.dart';
 void main() {
   runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  MainApp({super.key});
+
+  //create controller in global
+  final TodoController todoController = Get.put(TodoController());
 
   @override
   Widget build(BuildContext context) {
     const String appName = "Flutter Journey";
-    return MaterialApp(
+    //If we use GetX than Here use  GetMaterialApp Theme
+    return GetMaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         textTheme: TextTheme(
