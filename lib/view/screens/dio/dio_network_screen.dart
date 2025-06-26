@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_project/components/custom_button.dart';
-import 'package:my_first_project/screens/dio/get_request_screen.dart';
-import 'package:my_first_project/screens/dio/post_request_screen.dart';
+import 'package:my_first_project/view/screens/dio/post_request_screen.dart';
+
+import '../../components/custom_button.dart';
+import 'get_request_screen.dart';
 
 class DioNetworkScreen extends StatefulWidget {
   const DioNetworkScreen({super.key});
@@ -44,8 +45,6 @@ class _DioNetworkScreenState extends State<DioNetworkScreen> {
               },
               padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             ),
-
-
           ],
         ),
       ),

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_project/components/custom_button.dart';
-import 'package:my_first_project/components/custom_text_field.dart';
+import '../../components/custom_button.dart';
 import 'package:my_first_project/models/dio/user_request.dart';
 import 'package:my_first_project/network/user_api_service.dart';
+
+import '../../components/custom_text_field.dart';
 
 class PostRequestScreen extends StatefulWidget {
   const PostRequestScreen({super.key});

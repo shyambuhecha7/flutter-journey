@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_project/network/api_service.dart';
 
-import '../models/ApiResponse.dart';
+import '../../models/ApiResponse.dart';
+
 
 class NetworkScreen extends StatefulWidget {
   const NetworkScreen({super.key});

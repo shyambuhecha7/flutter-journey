@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_project/GridScreen.dart';
-import 'package:my_first_project/components/custom_button.dart';
-import 'package:my_first_project/components/custom_text_field.dart';
-import 'package:my_first_project/screens/ListScreen.dart';
-import 'package:my_first_project/screens/ListTileScreen.dart';
-import 'package:my_first_project/screens/common_screen.dart';
-import 'package:my_first_project/screens/dio/dio_network_screen.dart';
-import 'package:my_first_project/screens/network_screen.dart';
+import 'package:my_first_project/view/screens/GridScreen.dart';
+import 'package:my_first_project/view/screens/ListScreen.dart';
+import 'package:my_first_project/view/screens/ListTileScreen.dart';
+import 'package:my_first_project/view/screens/common_screen.dart';
+import 'package:my_first_project/view/screens/dio/dio_network_screen.dart';
+import 'package:my_first_project/view/screens/network_screen.dart';
+
 
 import 'SignUpScreen.dart';
+import '../components/custom_button.dart';
+import '../components/custom_text_field.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
